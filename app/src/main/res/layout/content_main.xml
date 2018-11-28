@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.pavan.braintrainer.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/StartButton"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="false"
+        android:textSize="50dp"
+        android:padding="30dp"
+        android:paddingTop="50dp"
+        android:background="#89bf39"
+        android:text="START"
+        android:onClick="run"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:id="@+id/Frameid">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30s"
+            android:id="@+id/timertextView"
+            android:layout_gravity="left|top"
+            android:textSize="40dp"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:id="@+id/pointertextView2"
+            android:layout_gravity="right|top"
+            android:textSize="40sp"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 + 20"
+            android:id="@+id/sumTextView"
+            android:layout_gravity="center_horizontal|top"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="273dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="70sp"
+                android:background="@color/colorPrimaryDark"
+                android:id="@+id/button0"
+
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="0"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:onClick="Cliked" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="70sp"
+                android:background="@color/colorPrimary"
+                android:id="@+id/button1"
+
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="1"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:onClick="Cliked" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="70sp"
+                android:background="@android:color/holo_blue_bright"
+                android:id="@+id/button2"
+                android:layout_row="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="0"
+                android:layout_gravity="fill"
+                android:tag="2"
+                android:layout_column="0"
+                android:onClick="Cliked" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="70sp"
+                android:background="@color/colorAccent"
+                android:id="@+id/button3"
+                android:layout_row="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="3"
+                android:layout_column="1"
+                android:onClick="Cliked" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:id="@+id/resultTextview"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="134sp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:visibility="visible" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:id="@+id/resetButton"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="60dp"
+            android:onClick="resetvalue"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+</RelativeLayout>
